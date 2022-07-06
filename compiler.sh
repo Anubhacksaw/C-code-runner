@@ -1,5 +1,5 @@
 sf (){
-	subl $a.c
+	vim $a.c
 echo "___Press 1 if you wrote your code___"
 read b 
 if [ "$b" = "1" ]; then
