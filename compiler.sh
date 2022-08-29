@@ -19,12 +19,21 @@ com (){
 	else
 		echo "___Your Output file___"
 		./$a
-		break
+		#break
 	fi 
 }
 echo "\033[41;5m         ℂ ℝ𝕌ℕℕ𝔼ℝ          \033[0m"
 echo "Enter the file name: "
-read a 
+read a
+[ -s $a.c ]
+if [ "$?" != "0" ]; then
+touch $a.c
+echo "#include<stdio.h>
+int main(){
+	//your code here
+	return 0;
+}" > $a.c 	
+fi
 sf
 while :
 do
